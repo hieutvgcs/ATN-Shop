@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="css/body.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(to right, #27b994, #c0a115)
+  }
+</style>
+
+<!-- <link rel="stylesheet" href="/css/login.css">  -->
+<%- include("./layout/head") %>
+
+  <%- include("./layout/nav") %>
+
+    <body>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+
+            <form class="box" action="/signin" method="POST">
+              <h2 style="color: white;">Đăng nhập</h2>
+              <p class="text-muted">
+                <% if (message.length> 0) { %>
+                  <div class="alert alert-danger">
+                    <%= message %>
+                  </div>
+                  <% } %>
+              </p>
+              <input type="text" name="email" placeholder="Email">
+              <input type="password" name="password" placeholder="Mật Khẩu">
+
+              <input type="submit" value="Đăng nhập">
+              <a class="" href="/register">Bạn chưa có tài khoản ?</a>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </body>
